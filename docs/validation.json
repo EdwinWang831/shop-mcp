@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "package": "shop-mcp",
+  "version": "0.1.0",
+  "validated_on": "2026-10-07",
+  "packaged_source_validation": {
+    "environment": "Python 3.11, MCP SDK 1.26.0, isolated temporary source directory",
+    "unittest": {"passed": 36, "failed": 0},
+    "business_tests": 35,
+    "stdio_integration_tests": 1,
+    "checks": [
+      "Real MCP stdio transport discovers all 18 tools",
+      "Checkout arithmetic returns 185.00 for the test fixture",
+      "Missing shipping information blocks checkout calculation",
+      "Wishlist persists across MCP process restarts",
+      "Watcher CLI produces empty stdout when no rules exist",
+      "Wheel includes the Hermes SKILL.md and both CLI entry points"
+    ],
+    "wheel": {
+      "filename": "shop_mcp-0.1.0-py3-none-any.whl",
+      "sha256": "f391967bfcb95949171642a81ba9c48f33794ffad00d87ca53f70b01707664a3"
+    }
+  },
+  "origin": {
+    "description": "Packaged from an existing personal Hermes shopping integration. Module imports and paths were adapted for installation and environment variables.",
+    "original_deployment_observations": [
+      "Hermes model invoked shopping tools",
+      "Public search retrieved product links and public evidence"
+    ],
+    "original_module_sha256": {
+      "shopping_search_v5.py": "f444b078fbcb434a8ee7b4dae767d63ac50b159953573299d028b5863fd336a6",
+      "shopping_evidence_v3.py": "4161a3c0bbd86ee1bd733d77f6554584d338e64ef162652976308dc0dfe624a7",
+      "shopping_assistant_v4.py": "9d2a3c642ea187092b0eea4ac4dbfce727db43254ec6ce99efa548849967391b",
+      "shopping_commerce_v5.py": "e4757eaefdb3ae9854ad1e14d9d2ea6b8dbd78b0a32c7250e1fbb273a62979d8",
+      "native.py": "abef23b605b9f4395b2814d111a265538eac4b2585ec28c417a250b5f7497fd4"
+    },
+    "deployment_note": "The published package has not replaced the existing production deployment. Original deployment observations are not end-to-end proof for a new installation."
+  },
+  "unverified_or_unsupported": [
+    "Authenticated JD or Taobao checkout prices, inventory and buyer reviews",
+    "Independent verification of user-provided checkout quotes and SKU attributes",
+    "Platform-wide price history or current validity of indexed promotions",
+    "Scheduled execution and notification-channel delivery",
+    "Ordering, payments and automatic coupon claiming",
+    "Multi-user or per-conversation data isolation"
+  ],
+  "privacy": "Only source, synthetic tests and this sanitized receipt are published. No account cookies, credentials, user databases, private session logs or delivery addresses are included."
+}

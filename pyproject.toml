@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shop-mcp"
+version = "0.1.0"
+description = "Evidence-aware shopping MCP tools for Hermes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = ["mcp>=1.26.0,<2"]
+
+[project.scripts]
+shop-mcp = "shop_mcp.server:cli"
+shop-mcp-price-watch = "shop_mcp.price_watch:cli"
+
+[tool.setuptools.packages.find]
+include = ["shop_mcp*"]
+
+[tool.setuptools.package-data]
+shop_mcp = ["SKILL.md"]
